@@ -1,0 +1,234 @@
+/* Styles for the whole body */
+body {
+  background-color: #87ceeb;
+  height: 100vh;
+  width: 100vw;
+  color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* Styles for the budget manager container */
+.budget-manager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 30px 35px 2px #69d2e7;
+  width: 600px;
+}
+
+/* Styles for the budget item list */
+.budget-list {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  list-style-type: none;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: calc(3 * 86px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #ccc;
+}
+
+.budget-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.budget-list::-webkit-scrollbar-track {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.budget-list::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+/* Styles for each budget item */
+.budget-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+}
+
+.budget-item:hover {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
+
+.budget-item .item-name {
+  flex-grow: 1;
+  font-weight: bold;
+  width: calc(100% / 3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.budget-item .item-amount {
+  font-size: 14px;
+  font-weight: bold;
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+.budget-item .buttons-container {
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.budget-item .edit-button {
+  background-color: #87ceeb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+}
+
+.budget-item .delete-button {
+  background-color: #ff7a5c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+}
+
+.budget-item .edit-button:hover,
+.delete-button:hover {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
+
+/* Styles for the budget summary boxes */
+.budget-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 500px;
+  color: #333;
+}
+
+.budget-summary .summary-box {
+  flex-grow: 1;
+  background-color: #333;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+}
+
+.budget-summary .summary-box h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.budget-summary .summary-box p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.budget-summary .summary-box .amount {
+  font-size: 24px;
+}
+
+.budget-summary .summary-box.total {
+  background-color: #ff6b6b;
+}
+
+.budget-summary .summary-box.remaining {
+  background-color: #7fbc8c;
+}
+
+.budget-summary .summary-box.spent {
+  background-color: #e3a018;
+}
+
+/* Styles for the form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 500px;
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+}
+
+.input {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+}
+
+.form button {
+  background-color: #87ceeb;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+}
+
+.form input:hover,
+button:hover {
+  transform: translateY(4px);
+  box-shadow: 1px 2px 0px 0px #000;
+}
