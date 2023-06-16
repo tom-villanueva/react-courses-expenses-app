@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import BudgetContext from "../BudgetContext";
 
-const BudgetExpenseForm = ({ onAddExpense }) => {
+const BudgetExpenseForm = () => {
+  const { onAddExpense } = useContext(BudgetContext);
+
   const [expense, setExpense] = useState({
     description: "",
     amount: "",
@@ -21,6 +24,11 @@ const BudgetExpenseForm = ({ onAddExpense }) => {
     };
 
     onAddExpense(newExpense);
+
+    setExpense({
+      description: "",
+      amount: "",
+    });
   };
 
   return (

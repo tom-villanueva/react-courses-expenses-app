@@ -1,6 +1,12 @@
+import { useContext } from "react";
 import BudgetSummaryBox from "./BudgetSummaryBox";
+import BudgetContext from "../BudgetContext";
 
-const BudgetSummary = ({ total, spent }) => {
+const BudgetSummary = () => {
+  const { total, totalSpent } = useContext(BudgetContext);
+
+  const spent = totalSpent();
+
   return (
     <section className="budget-summary">
       <BudgetSummaryBox title="total" amount={total} />

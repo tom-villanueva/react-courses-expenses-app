@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import BudgetItem from "./BudgetItem";
+import BudgetContext from "../BudgetContext";
 
-const BudgetList = ({ expenses }) => {
+const BudgetList = () => {
+  const { expenses } = useContext(BudgetContext);
+
   return (
     <ul className="budget-list">
       {expenses.map((expense) => {
